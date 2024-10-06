@@ -8,7 +8,9 @@
 
 body {
     color: #ededed;
-    background: url("https://github.com/debarshidutta/Awaaz_3/blob/fe3c41c9bf1986c10dc824a809eaa850505f1167/background1.jpg");
+    background: url(images/background1.jpg);
+    background-repeat: repeat-y;
+    background-size: auto;
 }
 
 /* Header Styling */
@@ -63,7 +65,6 @@ body {
 
 .home-content {
     max-width: 600px;
-    margin: auto;
     text-align: left;
 }
 
@@ -161,6 +162,10 @@ body {
     width: 60%;
 }
 
+.about-text {
+    padding-right: 69px;
+}
+
 .about-text h2 {
     font-size: 60px;
     font-weight: 700;
@@ -183,6 +188,7 @@ body {
     font-weight: 400;
     line-height: 1.6;
     margin-bottom: 4rem;
+    padding-right: 35px;
 }
 
 /* Services Section */
@@ -264,8 +270,36 @@ body {
     cursor: pointer;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
+/* Large screens (Desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .header {
+        padding: 20px 10%;
+    }
+
+    .home-content h1 {
+        font-size: 56px;
+    }
+
+    .home-content h3 {
+        font-size: 32px;
+    }
+
+    .about-text h2 {
+        font-size: 60px;
+    }
+
+    .about-text p {
+        padding-right: 25px;
+    }
+
+    .container {
+        padding: 90px;
+        padding-left: 200px;
+    }
+}
+
+/* Medium screens (Laptops, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
     .header {
         padding: 20px 5%;
     }
@@ -283,66 +317,13 @@ body {
     }
 
     .container {
-        padding: 50px;
+        padding: 70px;
+        padding-left: 150px;
     }
 }
 
-@media (max-width: 992px) {
-    .header {
-        flex-direction: row;
-    }
-
-    .navbar a {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    .about {
-        grid-template-columns: 1fr;
-    }
-
-    .about-img img {
-        width: 100%;
-    }
-
-    .home-content h1 {
-        font-size: 40px;
-    }
-
-    .home-content h3 {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 768px) {
-    .home-content h1 {
-        font-size: 36px;
-    }
-
-    .navbar {
-        padding-inline: 10px;
-    }
-
-    .home-content h3 {
-        font-size: 22px;
-    }
-
-    .about-text h2 {
-        font-size: 40px;
-    }
-
-    .sub-title {
-        font-size: 40px;
-    }
-
-    .container {
-        text-align: center;
-        justify-content: center;
-        padding: 30px;
-    }
-}
-
-@media (max-width: 576px) {
+/* Small screens (Tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
     .header {
         padding: 15px 2%;
     }
@@ -352,7 +333,7 @@ body {
     }
 
     .home-content h1 {
-        font-size: 32px;
+        font-size: 40px;
     }
 
     .home-content p {
@@ -360,19 +341,125 @@ body {
     }
 
     .about-text h2 {
-        font-size: 36px;
+        font-size: 40px;
     }
 
     .sub-title {
         font-size: 30px;
     }
+
+    .container {
+        padding: 50px;
+        padding-left: 100px;
+    }
+}
+
+/* Extra small screens (Mobiles, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .header {
+        padding: 10px 1%;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .about-text h2 {
+        font-size: 30px;
+    }
+
+    .sub-title {
+        font-size: 25px;
+    }
+
+    .container {
+        padding: 30px;
+        padding-left: 50px;
+    }
+
+    .container1 {
+        gap: 50px;
+    }
+}
+
+/* Extra extra small screens (Mobiles, 480px to 575px) */
+@media (min-width: 480px) and (max-width: 575px) {
+    .header {
+        padding: 5px 0;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .home-content h1 {
+        font-size: 24px;
+    }
+
+    .home-content p {
+        font-size: 12px;
+    }
+
+    .about-text h2 {
+        font-size: 20px;
+    }
+
+    .sub-title {
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 20px;
+        padding-left: 20px;
+    }
+}
+
+/* Extra extra extra small screens (Mobiles, 320px to 479px) */
+@media (max-width: 479px) {
+    .header {
+        padding: 0;
+    }
+
+    .navbar a {
+        font-size: 10px;
+    }
+
+    .home-content h1 {
+        font-size: 18px;
+    }
+
+    .home-content p {
+        font-size: 10px;
+    }
+
+    .about-text h2 {
+        font-size: 15px;
+    }
+
+    .sub-title {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 10px;
+        padding-left: 10px;
+    }
 }
 
 .container1 {
+    align-items: center;
     width: 600px;
     height: 500px;
-    padding: 75px 150px;
-    margin-left: 10px;
+    padding: 75px 10px;
+    margin-left: 350px;
 }
 
 .heading1 {
@@ -381,7 +468,7 @@ body {
     text-underline-offset: 10px;
     text-decoration-thickness: 5px;
     margin-bottom: 50px;
-    padding-left: 120px;
+    padding-left: 10px;
 }
 
 .bar {
@@ -648,7 +735,7 @@ section {
 
 .portfolio-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(359px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .row {
